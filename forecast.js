@@ -50,6 +50,7 @@ function renderForecast(data) {
             </div>
           </div>`;
     });
+    
     weatherOutput.innerHTML = html;
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     document.querySelectorAll('.hour-block').forEach(block => {
@@ -82,6 +83,7 @@ function showModal(hourData) {
           <div class="detail"><span>Вологість:</span><div>${hourData.humidity} %</div></div>
           <div class="detail"><span>Тиск:</span><div>${hourData.pressure_mb} мБ</div></div>
         </div>`;
+    
     modal.style.display = "block";
     const modalContent = modal.querySelector('.modal-content');
     modalContent.classList.remove('show');
