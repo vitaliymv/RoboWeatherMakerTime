@@ -6,7 +6,7 @@ const field = document.querySelector("#search");
 const spanError = document.querySelector("#error-message");
 
 function getWeather(city = "") {
-    const url = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&aqi=no`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&aqi=no`;
     fetch(url).then(async res => {
         if (res.status === 400) {
             weatherOutput.innerHTML = "";
